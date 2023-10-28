@@ -17,5 +17,9 @@ The browser considers this a user initiated action, so the text attached to the 
 image is "typed" into the hidden/iframed field. 
 
 Credit to Hacktricks for the idea:
-https://book.hacktricks.xyz/pentesting-web/clickjacking
+https://book.hacktricks.xyz/pentesting-web/clickjacking<br>
 Hacktricks Author: https://www.linkedin.com/in/carlos-polop-martin/
+
+My contact info:<br>
+@hoodoer
+hoodoer@bitwisemunitions.dev
