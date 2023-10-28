@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+	<title>Demo App</title>
+	<h1>Demonstration app</h1>
+	    <style>
+        .form-input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+	<h3>App to demo doing "typed" inputs in a clickjacking attack</h3>
+	<p>Clickjacking attack on this page will need to click buttons<br>
+	and "type" user inputs to be successful</p>
+	<br><br>
+	<button type="button" onclick="buttonClick()">Click me to show paycheck adjustment options!</button>
+	<br><br>
+
+
+	<form id="inputForm" style="display: none;">
+		<div class="form-input">
+			<input type="number" name="stolenMoney" placeholder="Paycheck Adjustment Value">
+		</div>
+
+		<div class="form-input">
+			<button type="submit">Submit paycheck adjustment</button>
+		</div>
+	</form>
+
+	<script type="text/javascript">
+		function buttonClick()
+		{
+			var inputForm = document.getElementById("inputForm");
+			inputForm.style.display = 'block';
+		}
+
+	</script>
+</body>
+</html>

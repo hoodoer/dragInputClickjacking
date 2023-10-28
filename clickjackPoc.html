@@ -1,0 +1,90 @@
+<head>
+  <style>
+    #target_website {
+      position:absolute;
+      width: 1000px;
+      height:1000px;
+      opacity:0.3000;
+      z-index:2;
+    }
+  .targetClass {
+    position: absolute;
+    left: 50px;
+    top: 700px;
+    z-index: 1;
+    display: none;
+  }
+ {background-color: rgb(255, 122, 89); }
+</style>
+</head>
+<body>
+  <title>POC</title>
+  <h1>Win a PS5!</h1>
+  <div><h3>Sponsored by TrustedSec</h3></div>
+  <div>Follow the instructions, the quicker you perform the action the higher your score!</div>
+  <br>
+  <div><h3>Instructions:</h3></div>
+  <div id='guidanceSet'></div>
+  <br>
+  <div id="dragDropper" style='display: none;' draggable="true" ondragstart="event.dataTransfer.setData('text/plain', '10,000,000.00')"><img src="http://127.0.0.1/tsLogo.png"></div>
+  <br>
+
+  <div id ="targetDiv" class="targetClass"><img id="target" src="http://127.0.0.1/target.png"></div>
+  <iframe id="target_website" src="http://127.0.0.1/index.html"></iframe>
+
+
+  <script>
+    const startTime = new Date();
+
+    function runGame()
+    {
+      var time = new Date();
+      var timeElapsed = (time - startTime) / 1000;
+      var target = document.getElementById("targetDiv");
+      var instructions = document.getElementById('guidanceSet');
+      var dragger = document.getElementById('dragDropper');
+
+      if (timeElapsed > 5 && timeElapsed <= 10)
+      {
+        target.style.top         = '450px';
+        target.style.left        = '55px';
+        target.style.display     = 'block';
+        instructions.textContent = 'Click the red X as fast as you can!';
+      }
+      else if (timeElapsed > 10 && timeElapsed <= 12)
+      {
+        target.style.display = 'none';
+        instructions.textContent = 'Calculating score...could be better...';
+
+      }
+      else if (timeElapsed > 12 && timeElapsed <= 17)
+      {
+        instructions.textContent = 'DRAG THE COOLEST LOGO EVA ONTO THE TARGET!';
+        dragger.style.display    = 'block';
+        target.style.display     = 'block';
+        target.style.top         = '535px';
+        target.style.left        = '100px';
+      }
+      else if (timeElapsed > 17 && timeElapsed <= 19)
+      {
+        target.style.display = 'none';
+        dragger.style.display = 'none';
+        instructions.textContent = 'Calculating score...a little better...';
+      }
+      else if (timeElapsed > 19 && timeElapsed <= 24)
+      {
+        target.style.top     = '525px';
+        target.style.left    = '55px';
+        target.style.display = 'block';
+      }
+      else if (timeElapsed > 24)
+      {
+        instructions.textContent = "Sorry, you didn't beat the high score so no PS5 for you.";
+        target.style.display = 'none';
+      }
+    }
+
+
+    setInterval(runGame, 1000);
+  </script>
+</body>
