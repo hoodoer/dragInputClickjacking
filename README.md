@@ -20,7 +20,7 @@ image is "typed" into the hidden/iframed field.
 Credit to Hacktricks for the idea:
 https://book.hacktricks.xyz/pentesting-web/clickjacking<br>
 Hacktricks Author: https://www.linkedin.com/in/carlos-polop-martin/
-
+<br>
 My contact info:<br>
 @hoodoer<br>
 hoodoer@bitwisemunitions.dev
