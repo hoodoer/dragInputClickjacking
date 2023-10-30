@@ -19,6 +19,8 @@ but a number value has to be "typed". This is possible through a drag and drop.<
 The browser considers this a user initiated action, so the text attached to the draggable<br>
 image is "typed" into the hidden/iframed field. 
 
+Refreshing the page restarts the "game". 
+
 Credit to Hacktricks for the idea:
 https://book.hacktricks.xyz/pentesting-web/clickjacking<br>
 Hacktricks Author: https://www.linkedin.com/in/carlos-polop-martin/
