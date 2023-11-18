@@ -4,6 +4,10 @@ Demo of using draggable elements in a clickjacking PoC to "type" user inputs.
 Video demonstration can be seen here:<br>
 https://www.youtube.com/watch?v=VIEZ1aByFvU
 
+Blog covering the technique is here:<br>
+https://trustedsec.com/blog/clickjacking-not-just-for-the-clicks
+
+<br>
 Start a quick web server in the directory with the .html files:
 python3 -m http.server 80
 
